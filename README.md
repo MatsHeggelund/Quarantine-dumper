@@ -20,7 +20,7 @@ The script can target an entire quarantine directory or a specific GUID quaranti
 Clone the repository and navigate to the folder:
 
 ```bash
-git clone https://github.com/yourusername/DefenderDump.git
+git clone https://github.com/MatsHeggelund/Quarantine-dumper.git
 cd DefenderDump
 ```
 
