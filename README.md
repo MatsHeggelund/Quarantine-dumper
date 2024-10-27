@@ -11,7 +11,7 @@ Clone the repository and navigate to the folder:
 
 ```bash
 git clone https://github.com/MatsHeggelund/Quarantine-dumper.git
-cd DefenderDump
+cd Quarantine-dumper
 ```
 
 ## Usage
