@@ -271,16 +271,16 @@ if __name__ == '__main__':
         epilog='''
 Examples:
   To process a quarantine directory and list entries:
-    python defender-dump.py --rootdir "Quarantine"
+    python quarantine-dumper.py --rootdir "Quarantine"
   
   To dump all quarantined files from a directory into a tar archive:
-    python defender-dump.py --rootdir "Quarantine" --dump
+    python quarantine-dumper.py --rootdir "Quarantine" --dump
   
   To process a specific GUID file within the quarantine directory and list entries:
-    python defender-dump.py --file "Quarantine/Entries/{GUID}"
+    python quarantine-dumper.py --file "Quarantine/Entries/{GUID}"
   
   To dump a specific GUID file into a tar archive:
-    python defender-dump.py --file "Quarantine/Entries/{GUID}" --dump
+    python quarantine-dumper.py --file "Quarantine/Entries/{GUID}" --dump
 ''',
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
