@@ -40,7 +40,38 @@ Examples:
   
   To dump a specific GUID file into a tar archive:
     python defender-dump.py --file "Quarantine/Entries/{GUID}" --dump
+```
 
+## Example
+
+Given:
+
+```
+├── Quarantine
+│   ├── Entries
+│   │   └── {61008CF3-0000-0000-6011-E57F8319243B}
+│   ├── ResourceData
+│   │   └── ...
+│   │       └── ...
+│   └── Resources
+│       └── ...
+│           └── ...
+```
+
+```
+└─$ python3 defender-dump.py -r Quarantine       
+2024-08-27 05:17:32.362718 Virus:DOS/Test_File \\?\C:\Users\User\Downloads\malicious.ps1
+
+└─$ python3 defender-dump.py -r Quarantine --dump                                          
+Exporting malicious.ps1
+File 'quarantine.tar' successfully created
+                                                                                                                                                                         
+└─$ python3 defender-dump.py -f Quarantine/Entries/\{61008CF3-0000-0000-6011-E57F8319243B\} 
+2024-08-27 05:17:32.362718 Virus:DOS/Test_File \\?\C:\Users\User\Downloads\malicious.ps1
+                                                                                                                                                                                                                  
+└─$ python3 defender-dump.py -f Quarantine/Entries/\{61008CF3-0000-0000-6011-E57F8319243B\} --dump
+Exporting malicious.ps1
+File 'quarantine.tar' successfully created
 ```
 
 ## Features
