@@ -58,6 +58,8 @@ Given:
 │           └── ...
 ```
 
+You can do the following:
+
 ```
 └─$ python3 defender-dump.py -r Quarantine       
 2024-08-27 05:17:32.362718 Virus:DOS/Test_File \\?\C:\Users\User\Downloads\malicious.ps1
