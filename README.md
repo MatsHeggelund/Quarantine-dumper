@@ -17,7 +17,7 @@ cd Quarantine-dumper
 ## Usage
 
 ```
-usage: defender-dump.py [-h] (--rootdir ROOTDIR | --file FILE) [-d]
+usage: quarantine-dumper.py [-h] (--rootdir ROOTDIR | --file FILE) [-d]
 
 Dump quarantined files from Windows Defender
 
@@ -30,16 +30,16 @@ options:
 
 Examples:
   To process a quarantine directory and list entries:
-    python defender-dump.py --rootdir "Quarantine"
+    python quarantine-dumper.py --rootdir "Quarantine"
   
   To dump all quarantined files from a directory into a tar archive:
-    python defender-dump.py --rootdir "Quarantine" --dump
+    python quarantine-dumper.py --rootdir "Quarantine" --dump
   
   To process a specific GUID file within the quarantine directory and list entries:
-    python defender-dump.py --file "Quarantine/Entries/{GUID}"
+    python quarantine-dumper.py --file "Quarantine/Entries/{GUID}"
   
   To dump a specific GUID file into a tar archive:
-    python defender-dump.py --file "Quarantine/Entries/{GUID}" --dump
+    python quarantine-dumper.py --file "Quarantine/Entries/{GUID}" --dump
 ```
 
 ## Example
@@ -61,17 +61,17 @@ Given:
 You can do the following:
 
 ```
-└─$ python3 defender-dump.py -r Quarantine       
+└─$ python3 quarantine-dumper.py -r Quarantine       
 2024-08-27 05:17:32.362718 Virus:DOS/Test_File \\?\C:\Users\User\Downloads\malicious.ps1
 
-└─$ python3 defender-dump.py -r Quarantine --dump                                          
+└─$ python3 quarantine-dumper.py -r Quarantine --dump                                          
 Exporting malicious.ps1
 File 'quarantine.tar' successfully created
                                                                                                                                                                          
-└─$ python3 defender-dump.py -f Quarantine/Entries/\{61008CF3-0000-0000-6011-E57F8319243B\} 
+└─$ python3 quarantine-dumper.py -f Quarantine/Entries/\{61008CF3-0000-0000-6011-E57F8319243B\} 
 2024-08-27 05:17:32.362718 Virus:DOS/Test_File \\?\C:\Users\User\Downloads\malicious.ps1
                                                                                                                                                                                                                   
-└─$ python3 defender-dump.py -f Quarantine/Entries/\{61008CF3-0000-0000-6011-E57F8319243B\} --dump
+└─$ python3 quarantine-dumper.py -f Quarantine/Entries/\{61008CF3-0000-0000-6011-E57F8319243B\} --dump
 Exporting malicious.ps1
 File 'quarantine.tar' successfully created
 ```
