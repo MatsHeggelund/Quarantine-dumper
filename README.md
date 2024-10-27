@@ -1,6 +1,6 @@
 # Quarantine-dumper
 
-`Quarantine-dumper` is a Python script for extracting quarantined files from Windows Defender. It decrypts quarantined files stored in the Windows Defender quarantine format, allowing you to view and recover items marked as threats. 
+`Quarantine-dumper` is a Python script for extracting quarantined files from Windows Defender. It decrypts quarantined files stored in the Windows Defender quarantine format, useful for threat intelligence or capture-the-flag (CTF) purposes. 
 
 The script can target an entire quarantine directory or a specific GUID quarantine file, outputting the recovered files either to the console or as a `.tar` archive.
 
